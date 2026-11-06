@@ -1,0 +1,23 @@
+[project]
+name = "tts"
+version = "0.1.0"
+description = "Real-time Kokoro 82M Text-to-Speech streamer for Discord and VoIP mics via virtual audio cables"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Qeya", email = "qeyalol@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "kokoro-onnx>=0.6.1",
+    "numpy>=2.0.0",
+    "sounddevice>=0.5.0",
+    "soundfile>=0.12.0",
+]
+
+[project.scripts]
+tts = "tts:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
